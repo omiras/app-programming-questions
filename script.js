@@ -25,6 +25,9 @@ document.querySelector('#load-question').addEventListener('click', async () => {
       if (pregunta.codeExamples.length > 0) {
         document.querySelector('#code-example').textContent = pregunta.codeExamples[0];
       }
+
+      document.getElementById('question-category').textContent = pregunta.categories.join(",");
+
   
       document.querySelector('#answer-0').textContent = pregunta.answerOptions[0].answer;
       document.querySelector('#answer-1').textContent = pregunta.answerOptions[1].answer;
